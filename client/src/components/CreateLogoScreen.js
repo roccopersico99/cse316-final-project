@@ -93,11 +93,18 @@ class CreateLogoScreen extends Component {
                                         margin.value = "";
                                     }}>
                                         <div className="form-group">
-                                            <label htmlFor="text">Text:</label>
+                                            <label htmlFor="text">Logo Name:</label>
                                             <input type="text" onChange={(e) => this.setState({text: e.target.value})} value={this.state.text} className="form-control" name="text" ref={node => {
                                                 text = node;
                                             }} placeholder="Default Logo" />
                                         </div>
+                                            <div className="form-group">
+                                                <div className="col-sm">
+                                                    <button type="addtext" className="btn btn-info">Add Text</button>
+                                                    <label htmlFor="text">test</label>
+                                                    <button type="addimage" className="btn btn-primary">Add Image</button>
+                                                </div>
+                                            </div>
                                         <div className="form-group">
                                             <label htmlFor="color">Color:</label>
                                             <input type="color" onChange={(e) => this.setState({color: e.target.value})} value={this.state.color} className="form-control" name="color" ref={node => {
