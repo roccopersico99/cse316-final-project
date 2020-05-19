@@ -1,0 +1,82 @@
+Example GraphQL Queries and Mutations for Logos:
+
+Query for displaying all properties of every logo in database:
+{
+  logos {
+    _id
+    currentText
+    currentColor
+    currentFontSize
+    currentImageSize
+    backgroundColor
+    borderColor
+    borderRadius
+    borderWidth
+    lastUpdate
+  }
+}
+
+Query for displaying all properties of a logo with a specifc id (5e92458eefeb265ffc2de11d):
+query {
+  logo(id: "5e92458eefeb265ffc2de11d") {
+    _id
+    currentText
+    currentColor
+    currentFontSize
+    currentImageSize
+    backgroundColor
+    borderColor
+    borderRadius
+    borderWidth
+    lastUpdate
+  }
+}
+
+Mutation for adding a new logo to the database and displaying it's properties: 
+mutation {
+  addLogo(currentText: "Added from GraphiQL", currentColor: "#aaaaaa", currentFontSize: 50, currentImageSize: 50, backgroundColor: "#bbbbbb", borderColor: "#cccccc", borderRadius: 10, borderWidth: 10) {
+    _id
+    currentText
+    currentColor
+    currentFontSize
+    currentImageSize
+    backgroundColor
+    borderColor
+    borderRadius
+    borderWidth
+    lastUpdate
+  }
+}
+
+Mutation for updating the properties of a logo in the database and displaying the updated properties:
+mutation {
+  updateLogo(id: "5e9502b3a7208f2980e7d5a2", currentText: "Updated from GraphiQL", currentColor: "#d00000", currentFontSize: 55, currentImageSize: 50, backgroundColor: "#e00000", borderColor: "#f00000", borderRadius: 15, borderWidth: 12) {
+    _id
+    currentText
+    currentColor
+    currentFontSize
+    currentImageSize
+    backgroundColor
+    borderColor
+    borderRadius
+    borderWidth
+    lastUpdate
+  }
+}
+
+Mutation for removing a logo from the database with a specific id (5e9502b3a7208f2980e7d5a2):
+mutation {
+  removeLogo(id: "5e9502b3a7208f2980e7d5a2") {
+    _id
+    currentText
+    currentColor
+    currentFontSize
+    currentImageSize
+    backgroundColor
+    borderColor
+    borderRadius
+    borderWidth
+    lastUpdate
+  }
+}
+
