@@ -135,10 +135,16 @@ class EditLogoScreen extends Component {
                                                     margin.value = data.logo.margin;
                                                 }}>
                                                     <div className="form-group">
-                                                        <label htmlFor="text">Text:</label>
+                                                        <label htmlFor="text">Logo Name:</label>
                                                         <input type="text" onChange={(e) => this.setState({text: e.target.value})} value={this.state.text} className="form-control" name="text" ref={node => {
                                                             text = node;
                                                         }} placeholder="Text"/>
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <div className="col-md-10">
+                                                            <button type="addtext" className="btn btn-info">Add Text</button>
+                                                            <button type="addimage" className="btn btn-primary">Add Image</button>
+                                                        </div>
                                                     </div>
                                                     <div className="form-group">
                                                         <label htmlFor="color">Color:</label>
@@ -189,6 +195,7 @@ class EditLogoScreen extends Component {
                                                         }} placeholder="Margin"/>
                                                     </div>
                                                     <button type="submit" className="btn btn-success">Submit</button>
+                                                    <button type="export" className="btn btn-warning">Export</button>
                                                 </form>
                                                 {loading && <p>Loading...</p>}
                                                 {error && <p>Error :( Please try again</p>}

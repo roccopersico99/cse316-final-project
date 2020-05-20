@@ -98,13 +98,12 @@ class CreateLogoScreen extends Component {
                                                 text = node;
                                             }} placeholder="Default Logo" />
                                         </div>
-                                            <div className="form-group">
-                                                <div className="col-sm">
+                                        <div className="form-group">
+                                                <div className="col-md-10">
                                                     <button type="addtext" className="btn btn-info">Add Text</button>
-                                                    <label htmlFor="text">test</label>
                                                     <button type="addimage" className="btn btn-primary">Add Image</button>
                                                 </div>
-                                            </div>
+                                        </div>
                                         <div className="form-group">
                                             <label htmlFor="color">Color:</label>
                                             <input type="color" onChange={(e) => this.setState({color: e.target.value})} value={this.state.color} className="form-control" name="color" ref={node => {
@@ -154,6 +153,7 @@ class CreateLogoScreen extends Component {
                                             }} placeholder="10" />
                                         </div>
                                         <button type="submit" className="btn btn-success">Submit</button>
+                                        <button type="export" className="btn btn-warning">Export</button>
                                     </form>
                                     {loading && <p>Loading...</p>}
                                     {error && <p>Error :( Please try again</p>}

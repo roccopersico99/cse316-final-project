@@ -113,6 +113,7 @@ class ViewLogoScreen extends Component {
                                                         }}>
                                                         <Link to={`/edit/${data.logo._id}`} className="btn btn-success">Edit</Link>&nbsp;
                                                     <button type="submit" className="btn btn-danger">Delete</button>
+                                                    <button type="export" className="btn btn-warning">Export</button>
                                                     </form>
                                                     {loading && <p>Loading...</p>}
                                                     {error && <p>Error :( Please try again</p>}
